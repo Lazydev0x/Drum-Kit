@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-  <head>
-     <link rel="stylesheet" type="text/css" href="astray.css" media=”screen” />
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="astray.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
  </head>
 
  <body>
@@ -9,7 +13,7 @@
                     <kbd>A</kbd>
                     <span class="Sound">Clap</span>
                 </div>
-            </div>
+            
 
             <div data-key="83" class="key">
                 <kbd>S</kbd>
@@ -61,5 +65,62 @@
         <audio data-key="74" src="sounds/snare.wav"></audio>
         <audio data-key="75" src="sounds/tom.wav"></audio>
         <audio data-key="76" src="sounds/tink.wav"></audio>
+
+        <style>
+            html {
+               background: url(./background.jpg) bottom center;
+               background-size: cover;
+            
+            }
+
+            body.html {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+
+            .keys {
+                display: flex;
+                flex: 1;
+                min-height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .key {
+                border: .4rem solid black;
+                border-radius: .5rem;
+                margin: 1rem;
+                font-size: 1.5rem;
+                padding: 1rem .5rem;
+                transition: all 0.7s ease;
+                width: 10rem;
+                text-align: center;
+                color: white;
+                background: rgba(0, 0, 0, 0.4);
+                text-shadow: 0 0 0 0.5rem black;
+
+            }
+
+            .playing {
+                transform: scale(1.1);
+                border-color: #ffc600;
+                box-shadow: 0 0 1rem #ffc600;
+            }
+
+            kbd {
+                display: block;
+                font-size: 4rem;
+            }
+
+
+            .Sound {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+                color: #ffc600;
+            }
+
+        </style>
  </body>
 </html>
